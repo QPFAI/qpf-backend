@@ -1,0 +1,24 @@
+# symbolic_modules/blackboard.py
+
+from collections import defaultdict
+
+# Registry mapping event names → list of listener callables
+_subscribers: dict[str, list[callable]] = defaultdict(list)
+
+def subscribe(event_type: str, fn: callable):
+    """
+    Register fn to be called whenever event_type is published.
+    fn signature should be fn(event_type: str, payload: dict).
+    """
+    _subscribers[event_type].append(fn)
+
+def publish(event_type: str, payload: dict):
+    """
+    Notify all subscribers of this event.
+    Each listener is called with (event_type, payload).
+    """
+    for fn in _subscribers.get(event_type, []):
+        try:
+            fn(event_type, payload)
+        except Exception as e:
+            print(f"⚠ Blackboard listener error in {fn.__name__}: {e}")
