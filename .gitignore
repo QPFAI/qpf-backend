@@ -1,9 +1,9 @@
-# Python cache & venv
+._*
+.DS_Store
+*.log
 __pycache__/
 *.pyc
 venv/
-# runtime-generated files
 users/
 qpf_weights.json
-*.log
 .env
