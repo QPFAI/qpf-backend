@@ -1,3 +1,12 @@
-python-dateutil
 fastapi
+uvicorn
+python-dateutil
+pydantic
 numpy
+requests
+starlette
+networkx
+python-dotenv
+ujson
+typing_extensions
+orjson
