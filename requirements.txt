@@ -3,7 +3,7 @@ uvicorn[standard]==0.22.0
 numpy==2.0.2
 python-dateutil==2.9.0.post0
 requests==2.32.4
-networkx==3.5
+networkx==3.2.1
 pyphi==1.2.0
 sentence-transformers==5.0.0
 pydantic==2.11.7
