@@ -17,7 +17,7 @@ pyphi.config.PARALLEL_COMPLEX_EVALUATION = False   # disable parallel complex ev
 # Turn off progress bars for cleaner logs
 pyphi.config.PROGRESS_BARS = False                # disable tqdm-style progress bars :contentReference[oaicite:3]{index=3}
 
-from network import NETWORK                    # your local network.py
+from q_core_modules.network import NETWORK                    # your local network.py
 from pyphi.compute.subsystem import phi        # the core Φ function
 
 def get_state_vector():
